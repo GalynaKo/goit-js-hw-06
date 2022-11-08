@@ -8,12 +8,14 @@ const numberEl = Number(refs.inputEl.dataset.length);
 console.log(numberEl);
 
 function onInputBlur(evt) {
-  console.log(evt.currentTarget.value.length);
-  evt.currentTarget.value.trim().length == numberEl
-    ? refs.inputEl.classList.add("valid") &&
-      refs.inputEl.classList.remove("invalid")
-    : refs.inputEl.classList.add("invalid") &&
-      refs.inputEl.classList.remove("valid");
+  // console.log(evt.currentTarget.value.length);
+  if (evt.currentTarget.value.trim().length == numberEl) {
+    refs.inputEl.classList.add("valid");
+    refs.inputEl.classList.remove("invalid");
+  } else {
+    refs.inputEl.classList.add("invalid");
+    refs.inputEl.classList.remove("valid");
+  }
 }
 
 //#validation-input {
