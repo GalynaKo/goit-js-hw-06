@@ -8,8 +8,8 @@ const numberEl = Number(refs.inputEl.dataset.length);
 console.log(numberEl);
 
 function onInputBlur(evt) {
-  console.log(evt.currentTarget.value.trim().length);
-  evt.currentTarget.value.length == numberEl
+  console.log(evt.currentTarget.value.length);
+  evt.currentTarget.value.trim().length == numberEl
     ? refs.inputEl.classList.add("valid") &&
       refs.inputEl.classList.remove("invalid")
     : refs.inputEl.classList.add("invalid") &&
