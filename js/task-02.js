@@ -22,7 +22,5 @@ for (let index = 0; index < ingredients.length; index++) {
   liCreate.textContent = ingredients[index];
   liCreate.classList = "item";
 
-  //console.log(liCreate);
-  ulEl.append(liCreate);
-  console.log(ulEl);
+  console.log(ulEl.append(liCreate));
 }
